@@ -101,7 +101,7 @@ extension Traveller {
             hidesBottomBar: Bool,
             animated: Bool,
             window: TravellerWindowProtocol?,
-            modelTransistion: UIView.AnimationOptions
+            viewAnimation: UIView.AnimationOptions
         )
         
         /**
@@ -203,7 +203,7 @@ extension Traveller {
                     hidesBottomBar,
                     animated,
                     window,
-                    modelTransistion
+                    viewAnimation
                 ):
                     return Traveller.shared.switchRootViewController(
                         destination: destination,
@@ -212,7 +212,7 @@ extension Traveller {
                         hidesBottomBar: hidesBottomBar,
                         animated: animated,
                         window: window,
-                        animations: modelTransistion,
+                        animations: viewAnimation,
                         configure: configure
                     )
                 case let .present(
